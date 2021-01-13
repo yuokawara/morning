@@ -114,40 +114,67 @@
 //     }
 // }
 
+// const select = document.querySelector('select');
+// const html = document.querySelector('html');
+// document.body.style.padding = '10px';
+
+// function update(bgcolor, textColor) {
+//     html.style.backgroundColor = bgcolor;
+//     html.style.color = textColor;
+// }
+
+// select.onchange = function() {
+//     (select.value === 'black') ? update('black', 'white') : update('white', 'black');
+// }
+
+// アクティブlerning1
+
+// const select = document.querySelector('select');
+// const list = document.querySelector('ul');
+// let h2 = document.querySelector('h2');
+
+// select.onchange = function() {
+//     let choice = select.value;
+//     let day = 31;
+
+//     if (choice === '2') {
+//         day = 28;
+//     } else if (choice === '4' || choice === '6' || choice === '9' || choice === '11') {
+//         day = 30;
+//     } else {
+//         day = 31
+//     }
+
+//     createCalender(days, choice + ' 月');
+// }
+
+// function createCalender (days, choice) {
+//     list.innerHTML = '';
+//     h2.textContent = choice;
+//     for (let i =1; i<= days; i++) {
+//         const listItem = document.createElement('li');
+//         listItem.textContent = i;
+//         list.appendChild(list);
+//     }  
+// }
+// createCalender(31, '1月');
+
+// アクティブlerning2
 const select = document.querySelector('select');
-const html = document.querySelector('html');
-document.body.style.padding = '10px';
+const html = document.querySelector('.output');
 
-function update(bgcolor, textColor) {
-    html.style.backgroundColor = bgcolor;
-    html.style.color = textColor;
-}
+select.onchange = function () {
+    const choice = select.value;
 
-select.onchange = function() {
-    (select.value === 'black') ? update('black', 'white') : update('white', 'black');
-}
+    switch (choice) {
+        case 'white':
+            html.style.backgroundColor = 'white';
 
-// アクティブlerning
-
-const select = document.querySelector('select');
-const list = document.querySelector('ul');
-let h2 = document.querySelector('h2');
-
-select.onchange = function() {
-    let choice = select.value;
-    let day = 31;
-
-    if (choice === '2') {
-        day = 28;
-    } else if (choice === '4' || choice === '6' || choice === '9' || choice === '11') {
-        day = 30;
-    } else {
-        day = 31
+            break;
     }
-
-    createCalender(days, choice + ' 月');
 }
 
-function createCalender (days, choice) {
-    list.innerHTML = '';
+function update(bgColor, textColor) {
+    html.style.backgroundColor = bgColor;
+    html.style.color = textColor;
 }
