@@ -169,8 +169,16 @@ select.onchange = function () {
     switch (choice) {
         case 'white':
             html.style.backgroundColor = 'white';
-
+            html.style.color = 'black';
             break;
+        case 'black':
+            html.style.backgroundColor = 'black';
+            html.style.color = 'white';
+        case 'purple':
+            html.style.backgroundColor = 'purple';
+            html.style.color = 'black';
+        case 'yellow':
+            
     }
 }
 
