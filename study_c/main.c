@@ -87,14 +87,104 @@
 //     return 0;
 // }
 
-int main (void) 
+// int main (void)
+// {
+//     unsigned char num1 = 1;
+
+//     num1--;
+//     printf("%d\n", num1);
+
+//     num1--;
+//     printf("%d\n", num1);
+//     return 0;
+// }
+
+// int main(void)
+//  {
+//      int number = 10;
+
+//      if (number == 10)
+//      {
+//          printf("sucess");
+//          // printf("%d\n", number == 10);
+//      }
+//      else
+//      {
+//          printf("fault");
+//          // printf("%d\n", number != 10);
+//      }
+//      return 0;
+//   }
+
+//   int main(void)
+//   {
+//       int number = 10;
+//       printf("%d\n", number == 10);
+//       printf("%d\n", number != 10);
+//   }
+
+// int main(void)
+// {
+//     int number = 10;
+
+//     if (number == 10)
+//     {
+//         printf("good");
+//     }
+//     else if (number > 10)
+//     {
+//         printf("no good");
+//     }
+//     else
+//     {
+//         printf("nothing");
+//     }
+//     return 0;
+// }
+
+// int main(void)
+//  {
+//      //int number = 58;
+//      int number = 73;
+
+//      if(number % 2 == 0)
+//      {
+//          printf("偶数：%d", number);
+//      }
+//     else
+//     {
+//         printf("ki数：%d", number);
+//     }
+
+//     return 0;
+//  }
+
+int main(void)
 {
-    unsigned char num1 = 1;
+    char score = 100;
 
-    num1--;
-    printf("%d\n", num1);
+    printf("start:%d", score);
 
-    num1--;
-    printf("%d\n", num1);
+    if (score == 100)
+    {
+        printf("excellent:%d", score);
+    }
+    else if (score <= 99 && score >= 80)
+    {
+        printf("so good:%d", score);
+    }
+    // else if (score <= 79 && score >= 30)
+    // {
+    //     printf("good:%d", score);
+    // }
+    // else if (score <= 29 && score >= 0)
+    // {
+    //     printf("no good:%d");
+    // }
+    else
+    {
+        printf("error:%d");
+    }
+
     return 0;
 }
