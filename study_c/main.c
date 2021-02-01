@@ -159,32 +159,193 @@
 //     return 0;
 //  }
 
+// int main(void)
+// {
+//     char score = 80;
+
+//     printf("start:%d", score);
+
+//     if (score == 100)
+//     {
+//         printf("excellent");
+//     }
+//     else if (score <= 99 && score >= 80)
+//     {
+//         printf("so good");
+//     }
+//     else if (score <= 79 && score >= 30)
+//     {
+//         printf("good");
+//     }
+//     else if (score <= 29 && score >= 0)
+//     {
+//         printf("no good");
+//     }
+//     else
+//     {
+//         printf("miss");
+//     }
+
+//     return 0;
+// }
+
+// int main(void)
+// {
+//     long year = 2032;
+//     printf("%d年：", year);
+
+//     if (year % 4 == 0)
+//     {
+//         if (year % 100 && year % 400 != 0)
+//         {
+//             printf("平年\n");
+//         }
+//         else
+//         {
+//             printf("閏年\n");
+//         }
+//     }
+//     else
+//     {
+//         printf("平年\n");
+//     }
+
+//     return 0;
+// }
+
+// int main(void)
+// {
+//     int fruit = 4;
+//     switch (fruit)
+//     {
+//     case 0:
+//         printf("150yen");
+
+//     case 1:
+//         printf("80yen");
+
+//     case 2:
+//         printf("400yen");
+
+//     default:
+//         printf("no fruit");
+//         break;
+//     }
+
+//     return 0;
+// }
+
+// int main(void)
+// {
+//     int i;
+
+//     for (i=0 ; i< 10; i++)
+//     {
+//         printf("数字　%d\n", i);
+//     }
+
+//     return 0;
+// }
+
+// int main(void)
+// {
+//     char i;
+//     char k;
+//     for (i = 1; i <= 9; i++)
+//     {
+//         for (k = 1; k <= 9; k++)
+//         {
+//             printf("%2d", i * k);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+// int main(void)
+// {
+//     int i = 10;
+
+//     while (i < 100)
+//     {
+//         if (i % 2 == 0)
+//         {
+//             i++;
+//             continue;
+//         }
+//         if (i > 50)
+//         {
+//             break;
+//         }
+//         printf("%d\n", i);
+
+//         i++;
+//     }
+//     return 0;
+// }
+// int sum(int para1, int para2)
+// {
+//     int calc;
+
+//     calc = para1 + para2;
+
+//     return calc;
+// }
+
+// short ret;
+
+// ret = subfunc(input);
+
+// if (ret == -1)
+// {
+//     printf("ERR");
+//     return 0;
+// }
+
+// unsigned long getAreaTriangle(unsigned long bottom, unsigned long height)
+// {
+//     unsigned long triangleArea;
+//     triangleArea = bottom * height / 2;
+
+//      return triangleArea;
+// }
+
+// int main(void)
+// {
+//     unsigned long bottom = 15;
+//     unsigned long height = 20;
+//     unsigned long triangleArea;
+
+//     triangleArea = getAreaTriangle(bottom, height);
+
+//     printf("面積 : %d", triangleArea);
+//     return 0;
+// }
+
+unsigned long getFactorial(unsigned short number)
+{
+    // unsigned long answer;
+    // answer = number * 1;
+    // return answer;
+    unsigned long ans = 1;
+    unsigned short i;
+
+    for (i = 1; i <= number; i++)
+    {
+        ans *= i;
+    }
+    return ans;
+}
+
 int main(void)
 {
-    char score = 100;
+    //     unsigned long number = 3;
+    //     unsigned long answer;
+    //     answer = getFactorial(number);
+    //     printf("数字 : %d", answer);
+    //     return 0;
+    unsigned short num = 10;
 
-    printf("start:%d", score);
-
-    if (score == 100)
-    {
-        printf("excellent:%d", score);
-    }
-    else if (score <= 99 && score >= 80)
-    {
-        printf("so good:%d", score);
-    }
-    // else if (score <= 79 && score >= 30)
-    // {
-    //     printf("good:%d", score);
-    // }
-    // else if (score <= 29 && score >= 0)
-    // {
-    //     printf("no good:%d");
-    // }
-    else
-    {
-        printf("error:%d");
-    }
-
+    printf("数字 : %d", getFactorial(num));
     return 0;
 }
