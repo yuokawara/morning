@@ -322,30 +322,96 @@
 //     return 0;
 // }
 
-unsigned long getFactorial(unsigned short number)
-{
-    // unsigned long answer;
-    // answer = number * 1;
-    // return answer;
-    unsigned long ans = 1;
-    unsigned short i;
+// unsigned long getFactorial(unsigned short number)
+// {
+//     // unsigned long answer;
+//     // answer = number * 1;
+//     // return answer;
+//     unsigned long ans = 1;
+//     unsigned short i;
 
-    for (i = 1; i <= number; i++)
-    {
-        ans *= i;
-    }
-    return ans;
-}
+//     for (i = 1; i <= number; i++)
+//     {
+//         ans *= i;
+//     }
+//     return ans;
+// }
 
-int main(void)
-{
-    //     unsigned long number = 3;
-    //     unsigned long answer;
-    //     answer = getFactorial(number);
-    //     printf("数字 : %d", answer);
-    //     return 0;
-    unsigned short num = 10;
+// int main(void)
+// {
+//     //     unsigned long number = 3;
+//     //     unsigned long answer;
+//     //     answer = getFactorial(number);
+//     //     printf("数字 : %d", answer);
+//     //     return 0;
+//     unsigned short num = 10;
 
-    printf("数字 : %d", getFactorial(num));
-    return 0;
-}
+//     printf("数字 : %d", getFactorial(num));
+//     return 0;
+// }
+
+// void displaySquare(unsigned short len)
+// {
+//     //たて
+//     unsigned short i;
+//     //横
+//     unsigned short k;
+
+//     for (i = 0; i < len; i++)
+//     {
+//         for (k = 0; k < len; k++)
+//         {
+//             printf("#");
+//         }
+//         printf("\n");
+//     }
+
+//     return;
+// }
+
+// int main(void)
+// {
+//     unsigned short length = 3;
+
+//     displaySquare(length);
+//     return 0;
+// }
+// char echoNo = 0;
+// void echoGreeting(void)
+// {
+//     switch (echoNo)
+//     {
+//     case 0:
+//         printf("ohayou");
+//         break;
+
+//     case 1:
+//         printf("konichiwa");
+//         break;
+
+//     case 2:
+//         printf("kobannwa");
+//         break;
+
+//     default:
+//         break;
+//     }
+
+//     echoNo++;
+
+//     if(echoNo >= 3)
+//     {
+//         echoNo = 0;
+//     }
+
+//     return;
+// }
+
+// int main(void)
+//     {
+//         echoGreeting();
+//         echoGreeting();
+//         echoGreeting();
+    
+//         return 0;
+//     }
