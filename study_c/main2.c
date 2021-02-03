@@ -133,12 +133,35 @@
 //     return 0;
 // }
 
+// int main(void)
+// {
+//     char moji1[10] = {'H','e','l','l','o','\0'};
+//     char moji2[] = "world";
+//     printf("%s\n", moji1);
+//     printf("%s\n", moji2);
+
+//     return 0;
+// }
+
+#include <string.h>
+
 int main(void)
 {
-    char moji1[10] = {'H','e','l','l','o','\0'};
-    char moji2[] = "world";
-    printf("%s\n", moji1);
+    char moji1[20] = "hello";
+    char moji2[10] = {0};
+
+    char moji3[20] = "world";
+    char moji4[10] = {0};
+
+    size_t len;
+
+    len = strlen(moji1);
+
+    memcpy(moji2, moji1, len);
     printf("%s\n", moji2);
+
+    strcpy_s(moji4, 10, moji3);
+    printf("%s\n", moji4);
 
     return 0;
 }
