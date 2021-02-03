@@ -80,26 +80,65 @@
 //     return 0;
 // }
 
+// int main(void)
+// {
+//     int num[9][9] = {0};
+//     int i, k;
+
+//     for (i = 0; i < 9; i++)
+//     {
+//         for (k = 0; k < 9; k++)
+//         {
+//             num[i][k] = (i + 1) * (k + 1);
+//         }
+//     }
+
+//     for (i = 0; i < 9; i++)
+//     {
+//         for (k = 0; k < 9; k++)
+//         {
+//             printf("%2d", num[i][k]);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+// int main(void)
+// {
+//     char moji;
+
+//     moji = 'A';
+//     printf("%c, 0x%x\n", moji, moji);
+
+//     moji = 0x41;
+//     printf("%c, 0x%x\n", moji, moji);
+
+//     return 0;
+// }
+
+// int main(void)
+// {
+//     char moji[10];
+
+//     moji[0] = 'H';
+//     moji[1] = 'E';
+//     moji[2] = 'L';
+//     moji[3] = 'L';
+//     moji[4] = 'O';
+//     moji[5] = '\0';
+
+//     printf("%s", moji);
+
+//     return 0;
+// }
+
 int main(void)
 {
-    int num[9][9] = {0};
-    int i, k;
+    char moji1[10] = {'H','e','l','l','o','\0'};
+    char moji2[] = "world";
+    printf("%s\n", moji1);
+    printf("%s\n", moji2);
 
-    for (i = 0; i < 9; i++)
-    {
-        for (k = 0; k < 9; k++)
-        {
-            num[i][k] = (i + 1) * (k + 1);
-        }
-    }
-
-    for (i = 0; i < 9; i++)
-    {
-        for (k = 0; k < 9; k++)
-        {
-            printf("%2d", num[i][k]);
-        }
-        printf("\n");
-    }
     return 0;
 }
