@@ -62,20 +62,44 @@
 //     return 0;
 // }
 
+// int main(void)
+// {
+//     int num[] = {10, 3002, 529, 1920};
+
+//     int i;
+//     int max = num[0];
+
+//     for (i = 1; i < sizeof(num)/sizeof(num[0]); i++)
+//     {
+//         if(max < num[i])
+//         {
+//             max = num[i];
+//         }
+//     }
+//     printf("%d", max);
+//     return 0;
+// }
+
 int main(void)
 {
-    int num[] = {10, 3002, 529, 1920};
+    int num[9][9] = {0};
+    int i, k;
 
-    int i;
-    int max = num[0];
-
-    for (i = 1; i < sizeof(num)/sizeof(num[0]); i++)
+    for (i = 0; i < 9; i++)
     {
-        if(max < num[i])
+        for (k = 0; k < 9; k++)
         {
-            max = num[i];
+            num[i][k] = (i + 1) * (k + 1);
         }
     }
-    printf("%d", max);
+
+    for (i = 0; i < 9; i++)
+    {
+        for (k = 0; k < 9; k++)
+        {
+            printf("%2d", num[i][k]);
+        }
+        printf("\n");
+    }
     return 0;
 }
