@@ -143,33 +143,69 @@
 //     return 0;
 // }
 
-#include <string.h>
+// #include <string.h>
 
-int main(void)
-{
-    char moji1[20] = "hello";
-    char moji2[10] = {0};
+// int main(void)
+// {
+//     char moji1[20] = "hello";
+//     char moji2[10] = {0};
 
-    char moji3[20] = "world";
-    char moji4[10] = {0};
+//     char moji3[20] = "world";
+//     char moji4[10] = {0};
 
-    size_t len;
+//     size_t len;
 
-    len = strlen(moji1);
+//     len = strlen(moji1);
 
-    memcpy(moji2, moji1, len);
-    printf("%s\n", moji2);
+//     memcpy(moji2, moji1, len);
+//     printf("%s\n", moji2);
 
-    strcpy_s(moji4, 10, moji3);
-    printf("%s\n", moji4);
+//     strcpy_s(moji4, 10, moji3);
+//     printf("%s\n", moji4);
 
-    return 0;
-<<<<<<< HEAD
-}
+//     return 0;
+// }
 
-int main(void)
-{
-    
-=======
->>>>>>> origin/main
-}
+// #include <string.h>
+
+// int main(void)
+// {
+//     size_t len;
+
+//     len = strlen("world");
+//     return 0;
+// }
+
+// #include <string.h>
+
+// int main(void)
+// {
+//     char ja_moji[] = "テストです";
+
+//     printf("%s\n", ja_moji);
+
+//     printf("%d\n", sizeof(ja_moji));
+
+//     return 0;
+// }
+
+// int main(void)
+// {
+//     char moji;
+
+//     for (moji = 0x20; moji <= 0x7E; moji++)
+//     {
+//         printf("%c", moji);
+//     }
+//     return 0;
+// }
+
+// int main(void)
+// {
+//     struct Coordinate position;
+
+//     position.latitude = 34.6461867;
+//     position.longitude = 134.9991424;
+
+//     return 0;
+// }
