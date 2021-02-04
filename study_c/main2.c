@@ -164,9 +164,12 @@ int main(void)
     printf("%s\n", moji4);
 
     return 0;
+<<<<<<< HEAD
 }
 
 int main(void)
 {
     
+=======
+>>>>>>> origin/main
 }
