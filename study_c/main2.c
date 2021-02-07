@@ -38,7 +38,7 @@
 
 // int main(void)
 // {
-//     char array2D[3][5] = 
+//     char array2D[3][5] =
 //     {
 //         {56, 1,45,82,29},
 //         {43,99,51,71, 7},
@@ -209,3 +209,156 @@
 
 //     return 0;
 // }
+
+// typedef struct
+// {
+//     double latitude;
+//     double longitude;
+// } Coordinate;
+
+// Coordinate pos;
+
+// int main(void)
+// {
+//     // Coordinate pos1 = {34.6461, 134.9991};
+//     // Coordinate pos2;
+
+//     // pos2 = pos1;
+
+//     Coordinate pos[3] =
+//     {
+//         {34.646186, 134.999142},
+//         {38.259621, 140.882061},
+//         {43.068551, 141.350975},
+//     };
+
+//     pos[0].latitude = 33.521499;
+//     pos[0].latitude = 33.521499;
+
+//     return 0;
+// }
+
+// typedef struct
+// {
+//     double latitude;
+//     double longitude;
+// } Coordinate;
+
+// // 座標表示
+// void printCoordinate(Coordinate pos)
+// {
+//     printf("lat:%lf\n", pos.latitude);
+//     printf("lon:%lf\n", pos.longitude);
+// }
+
+// int main(void)
+// {
+//     Coordinate pos = {34.6461867, 134.9991424};
+
+//     printCoordinate(pos);
+
+//     return 0;
+// }
+
+// typedef struct
+// {
+//     char num1;
+//     short num2;
+//     char num3;
+//     long num4;
+// } S_NUM;
+
+// int main(void)
+// {
+//     S_NUM num;
+
+//     printf("size:%d\n", sizeof(S_NUM));
+
+//     printf("num1:0x%p\n", &num.num1);
+//     printf("num2:0x%p\n", &num.num2);
+//     printf("num3:0x%p\n", &num.num3);
+//     printf("num4:0x%p\n", &num.num4);
+
+//     return 0;
+// }
+
+// typedef struct
+// {
+//     unsigned char hour;
+//     unsigned char min;
+//     unsigned char sec;
+// } S_Time;
+
+// S_Time setTime(unsigned char hour, unsigned char min,  unsigned char sec)
+// {
+//     S_Time time = {0};
+
+//     if (hour >= 24 || min >= 60 || sec >= 60)
+//     {
+//         return time;
+//     }
+
+//     time.hour = hour;
+//     time.min = min;
+//     time.sec = sec;
+
+//     return time;
+// }
+
+// void PrintTime(S_Time time)
+// {
+//     printf("%d時%d分%d秒\n", time.hour, time.min, time.sec);
+// }
+
+// int main(void)
+// {
+//     S_Time time = {18, 28, 6};
+
+//     PrintTime(time);
+
+//     return 0;
+// }
+
+// S_Time setTime(unsigned char hour, unsigned char min,  unsigned char sec)
+// {
+//     S_Time time = {0};
+
+//     if (hour >= 24 || min >= 60 || sec >= 60)
+//     {
+//         return time;
+//     }
+
+//     time.hour = hour;
+//     time.min = min;
+//     time.sec = sec;
+
+//     return time;
+// }
+
+// int main(void)
+// {
+//     S_Time time;
+//     time = setTime(18, 30, 30);
+
+//     printf(time);
+
+//     return 0;
+// }
+
+typedef union
+{
+    char sofa[2];
+    short bed;
+} U_SOFABED;
+
+int main(void)
+{
+    U_SOFABED sofabed;
+
+    sofabed.sofa[0] = 0x12;
+    sofabed.sofa[1] = 0x34;
+
+    sofabed.bed = 0x5678;
+
+    return 0;
+}
