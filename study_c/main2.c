@@ -345,20 +345,77 @@
 //     return 0;
 // }
 
-typedef union
+// typedef union
+// {
+//     char sofa[2];
+//     short bed;
+// } U_SOFABED;
+
+// int main(void)
+// {
+//     U_SOFABED sofabed;
+
+//     sofabed.sofa[0] = 0x12;
+//     sofabed.sofa[1] = 0x34;
+
+//     sofabed.bed = 0x5678;
+
+//     return 0;
+// }
+
+// #define D_KIND_APPLE_ID (0)
+// #define D_KIND_BANANA_ID (1)
+// #define D_KIND_PEACH_ID (2)
+
+// void printPrice(int kind)
+// {
+//     switch (kind)
+//     {
+//     case D_KIND_APPLE_ID:
+//         printf("250yen\n");
+//         break;
+
+//     case D_KIND_BANANA_ID:
+//         printf("300yen\n");
+//         break;
+
+//     case D_KIND_PEACH_ID:
+//         printf("450yen\n");
+//         break;
+//     }
+// }
+
+// int main(void)
+// {
+//     printPrice(D_KIND_PEACH_ID);
+//     return 0;
+// }
+
+// #define trinangle(base, high) ((base) * (high) / 2.0)
+
+// int main(void)
+// {
+//     double area;
+
+//     area = trinangle(10.0, 30.0);
+//     printf("%lf\n", area);
+
+//     return 0;
+// }
+
+#define D_PI (3.14)
+
+double getCircleLength(double radius)
 {
-    char sofa[2];
-    short bed;
-} U_SOFABED;
+    return radius * 2 * D_PI;
+}
 
 int main(void)
 {
-    U_SOFABED sofabed;
+    double len;
 
-    sofabed.sofa[0] = 0x12;
-    sofabed.sofa[1] = 0x34;
-
-    sofabed.bed = 0x5678;
+    len = getCircleLength(2.8 + 1.4);
+    printf("%lf\n", len);
 
     return 0;
 }
