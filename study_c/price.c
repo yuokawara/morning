@@ -15,7 +15,7 @@ main()
     printf("parking start YYYYMMDDHHMMSS : ");
     scanf("%s", buff);
     cal_stime = get_caltime(buff);
-    
+
     if (cal_stime == -1)
     {
         printf("test error\n");
