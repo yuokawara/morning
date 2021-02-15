@@ -119,40 +119,218 @@
 // return;
 // }
 
-int sumArray(long *pArray, int *arrayNum, long *pSum)
-{
-    long sum = 0;
-    int i;
+// int sumArray(long *pArray, int *arrayNum, long *pSum)
+// {
+//     long sum = 0;
+//     int i;
 
-    if (pArray == NULL || pSum == NULL)
-    {
-        return -1;
-    }
+//     if (pArray == NULL || pSum == NULL)
+//     {
+//         return -1;
+//     }
 
-    for (i = 0; i < arrayNum; i++)
-    {
-        sum += pArray[i];
-    }
-    *pSum = sum;
+//     for (i = 0; i < arrayNum; i++)
+//     {
+//         sum += pArray[i];
+//     }
+//     *pSum = sum;
 
-    return 0;
-}
+//     return 0;
+// }
 
-int main(void)
-{
-    long num[] = {29, 9642, -3849, 628, 20};
-    long sum = 0;
-    int ret;
+// int main(void)
+// {
+//     long num[] = {29, 9642, -3849, 628, 20};
+//     long sum = 0;
+//     int ret;
 
-    ret = sumArray(num, sizeof(num) / sizeof(num[0]), &sum);
+//     ret = sumArray(num, sizeof(num) / sizeof(num[0]), &sum);
 
-    if (ret == 0)
-    {
-        printf("sum:%d", sum);
-    }
-    else
-    {
-        printf("error");
-    }
-    return 0;
-}
+//     if (ret == 0)
+//     {
+//         printf("sum:%d", sum);
+//     }
+//     else
+//     {
+//         printf("error");
+//     }
+//     return 0;
+// }
+
+// int sortNumber(long * pNumber, int arrayNum)
+// {
+//     int i, k;
+//     long tmp;
+
+//     if (pNumber == NULL)
+//     {
+//         return -1;
+//     }
+
+//     for (i = 0; i < arrayNum; i++)
+//     {
+//         for (k = i + 1; k < arrayNum; k++)
+//         {
+//             if(pNumber[i] > pNumber[k])
+//             {
+//                 tmp = pNumber[i];
+//                 pNumber[k] = tmp;
+//             }
+//         }
+//     }
+//     return 0;
+// }
+
+// int main(void)
+// {
+//     long num[] = {10, -290, 3498, 28, -943};
+//     int i;
+
+//     sortNumber(num, sizeof(num)/sizeof(num[0]));
+
+//     for (i = 0; i < sizeof(num)/sizeof(num[0]); i++)
+//     {
+//         printf("%d\n", num[i]);
+//     }
+//     return 0;
+// }
+
+// typedef struct
+// {
+//     double lon;
+//     double lat;
+// } S_Coordinate;
+
+// int main(void)
+// {
+//     S_Coordinate pos;
+//     S_Coordinate * pPos = &pos;
+
+//     pPos->lon = 139.74;
+//     pPos->lat = 35.65;
+
+//     // 間接参照 ドット演算子
+//     (*pPos).lon = 139.74;
+//     (*pPos).lat = 35.65;
+
+//     return 0;
+// }
+
+// typedef struct
+// {
+//     double latitude;
+//     double longitude;
+// } S_Coordinate;
+
+// int getTokyoTowerPosition (S_Coordinate * pPos)
+// {
+//     if (pPos == NULL)
+//     {
+//         return -1;
+//     }
+
+//     pPos->latitude = 35.658581;
+//     pPos->longitude = 139.745433;
+
+//     return 0;
+
+// }
+
+// int main(void)
+// {
+//     S_Coordinate pos = {0};
+//     int ret = -1;
+
+//     if (ret < 0)
+//     {
+//         printf("error");
+//     }
+//     else
+//     {
+//         printf("lati:%lf longi:%lf", pos.latitude, pos.longitude);
+//     }
+
+//     return 0;
+// }
+
+// typedef struct
+// {
+//     long japanese;
+//     long arithmetic;
+//     long science;
+//     long social;
+// } S_Subject;
+
+// int getAverage(S_Subject pSub[], int num, S_Subject * pAve)
+// {
+//     S_Subject ave = {0};
+//     int i;
+
+//     for (i = 0; i < num; i++)
+//     {
+//         ave.japanese += pSub[i].japanese;
+//         ave.arithmetic += pSub[i].arithmetic;
+//         ave.science += pSub[i].science;
+//         ave.social += pSub[i].social;
+//     }
+
+//     ave.japanese /= num;
+//     ave.arithmetic /= num;
+//     ave.science /= num;
+//     ave.social /= num;
+
+//     *pAve = ave;
+
+//     return 0;
+// }
+
+// int main(void)
+// {
+//     S_Subject point[] = {
+//         {72, 85, 54, 61},
+//         {50, 43, 38, 49},
+//         {89, 92, 87, 78},
+//         {72, 25, 36, 98},
+//     };
+//     S_Subject ave = {0};
+//     int ret;
+
+//     ret = getAverage(point, sizeof(point)/sizeof(point[0]), &ave);
+
+//     if (ret < 0)
+//     {
+//         printf("error");
+//     }
+//     else
+//     {
+//         printf("jap:%d\n", ave.japanese);
+//         printf("math:%d\n", ave.arithmetic);
+//         printf("sci:%d\n", ave.science);
+//         printf("soci:%d\n", ave.social);
+//     }
+//     return 0;
+
+// }
+
+// int main(void)
+// {
+//     char * pnum1;
+//     short * pnum2;
+//     long * pnum3;
+
+//     printf("pnum1 :%d\n", sizeof(pnum1));
+//     printf("pnum2 :%d\n", sizeof(pnum2));
+//     printf("pnum3 :%d\n", sizeof(pnum3));
+
+//     printf("----------\n");
+
+//     // printf("char: %d\n", sizeof(char *));
+//     // printf("short: %d\n", sizeof(short *));
+//     // printf("long: %d\n", sizeof(long *));
+
+//     // printf("----------\n");
+
+//     // printf("pnum1: %d\n", sizeof(*pnum1));
+//     // printf("pnum2: %d\n", sizeof(*pnum2));
+//     // printf("pnum3: %d\n", sizeof(*pnum3));
+// }
