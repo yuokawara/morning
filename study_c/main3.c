@@ -334,3 +334,93 @@
 //     // printf("pnum2: %d\n", sizeof(*pnum2));
 //     // printf("pnum3: %d\n", sizeof(*pnum3));
 // }
+// long func(long num1, long num2)
+// {
+//     printf("%d\n", num1 + num2);
+//     return num1 + num2;
+// }
+
+// int main(void)
+// {
+//     // 関数ポインタ
+//     long (*pfunc)(long, long);
+//     func(100, 200);
+
+//     pfunc = func;
+//     pfunc(100, 200);
+
+//     return 0;
+// }
+
+// typedef long(* FP_FUNC)(int, short);
+
+// void sub(FP_FUNC pfunc, int num)
+// {
+//     return;
+// }
+
+// int main(void)
+// {
+//     FP_FUNC pfunc = NULL;
+//     sub(pfunc, 100);
+
+//     return 0;
+// }
+
+// typedef void (* FP_HELLO)(void);
+
+// void hello(void)
+// {
+//     printf("hello\n");
+// }
+
+// int main(void)
+// {
+//     FP_HELLO pFunc = NULL;
+//     pFunc = hello;
+//     pFunc();
+
+//     return 0;
+// }
+
+typedef void (*FP_CALCULATION)(long, long);
+
+void addition(long num1, long num2)
+{
+    printf("%d + %d => %d\n", num1, num2, num1 + num2);
+    return;
+}
+
+void subtraction(long num1, long num2)
+{
+    printf("%d - %d => %d\n", num1, num2, num1 - num2);
+    return;
+}
+
+void multiplication(long num1, long num2)
+{
+    printf("%d * %d => %d\n", num1, num2, num1 * num2);
+    return;
+}
+
+void division(long num1, long num2)
+{
+    printf("%d / %d => %d\n", num1, num2, num1 / num2);
+    return;
+}
+
+int main(void)
+{
+    FP_CALCULATION pFunc[] = {
+        addition,
+        subtraction,
+        multiplication,
+        division};
+    int i;
+
+    for (i = 0; i < sizeof(pFunc) / sizeof(pFunc[0]); i++)
+    {
+        pFunc[i](200, 50);
+    }
+    return 0;
+}
