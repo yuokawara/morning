@@ -40,32 +40,101 @@
 //     return 0;
 // }
 
-#define D_ARRAY (1000)
+// #define D_ARRAY (1000)
 
-int main(void)
-{
-    long * pArray = NULL;
-    int i;
+// int main(void)
+// {
+//     long * pArray = NULL;
+//     int i;
 
-    pArray = (long *)malloc(sizeof(long) * D_ARRAY);
-    if (pArray == NULL)
+//     pArray = (long *)malloc(sizeof(long) * D_ARRAY);
+//     if (pArray == NULL)
+//     {
+//         printf("error");
+//         return 0;
+//     }
+
+//     for (i = 0; i < D_ARRAY; i++)
+//     {
+//         pArray[i] = i;
+//     }
+
+//     for (i = D_ARRAY - 10; i < D_ARRAY; i++)
+//     {
+//         printf("[%d] = %d\n", i, pArray[i]);
+//     }
+
+//     free(pArray);
+//     pArray = NULL;
+
+//     return 0;
+// }
+
+// int main(void)
+// {
+//     char moji[] = "hello";
+//     char * pmoji = "world";
+
+//     printf("%s\n", moji);
+//     printf("%s\n", pmoji);
+
+//     return 0;
+// }
+
+// #include <string.h>
+
+// int countChartacter(char * str, char moji)
+// {
+//     int count = 0;
+//     size_t i;
+
+//     if (str == NULL)
+//     {
+//         return -1;
+//     }
+
+//     for (i = 0; i < strlen(str); i++)
+//     {
+//         if(str[i] == moji)
+//         {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+
+// int main(void)
+// {
+//     char sentence[] = "I'm studying programming at a manufacturing C language school.";
+//     char moji;
+//     int count;
+
+//     moji = 'a';
+//     count = countChartacter(sentence, moji);
+//     printf("文字：%c 個数：%d\n", moji, count);
+
+//     moji = 'm';
+//     count = countChartacter(sentence, moji);
+//     printf("文字：%c 個数：%d\n", moji, count);
+
+//     return 0;
+// }
+
+#include <string.h>
+
+int toUpper (char * str) {
+    size_t i;
+
+    if (str == NULL)
     {
-        printf("error");
-        return 0;
+        return -1;
     }
 
-    for (i = 0; i < D_ARRAY; i++)
+    for (i = 0; i < srtlen(str); i++)
     {
-        pArray[i] = i;
+        if (str[i] >= 'a' && str[i] <= 'z')
+        {
+            str[i] -= 'a' - 'A';
+        }
     }
-
-    for (i = D_ARRAY - 10; i < D_ARRAY; i++)
-    {
-        printf("[%d] = %d\n", i, pArray[i]);
-    }
-
-    free(pArray);
-    pArray = NULL;
-
-    return 0;
 }
