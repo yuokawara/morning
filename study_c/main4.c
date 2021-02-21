@@ -120,21 +120,72 @@
 //     return 0;
 // }
 
-#include <string.h>
+// #include <string.h>
 
-int toUpper (char * str) {
-    size_t i;
+// int toUpper (char * str) {
+//     size_t i;
 
-    if (str == NULL)
-    {
-        return -1;
-    }
+//     if (str == NULL)
+//     {
+//         return -1;
+//     }
 
-    for (i = 0; i < srtlen(str); i++)
-    {
-        if (str[i] >= 'a' && str[i] <= 'z')
-        {
-            str[i] -= 'a' - 'A';
-        }
-    }
-}
+//     for (i = 0; i < strlen(str); i++)
+//     {
+//         if (str[i] >= 'a' && str[i] <= 'z')
+//         {
+//             str[i] -= 'a' - 'A';
+//         }
+//     }
+
+//     return 0;
+// }
+
+// int main(void)
+// {
+//     char moji[] = "Hello World";
+
+//     toUpper(moji);
+
+//     printf("%s\n", moji);
+
+//     return 0;
+// }
+
+// #include <string.h>
+
+// int reverse (char * str)
+// {
+//     // if (str == NULL)
+//     // {
+//     //     return -1;
+//     // }
+//     char * pEnd = str;
+//     char tmp;
+//     size_t i;
+
+//     for (i = 0; i < strlen(str) -1; i++)
+//     {
+//         pEnd++;
+//     }
+
+//     while (str < pEnd)
+//     {
+//         tmp = *str;
+//         *str = *pEnd;
+//         *pEnd = tmp;
+
+//         str++;
+//         pEnd--;
+//     }
+//     return 0;
+// }
+
+// int main(void)
+// {
+//     char moji[] = "Good Morning";
+//     reverse(moji);
+//     printf("%s\n", moji);
+
+//     return 0;
+// }
