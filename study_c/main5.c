@@ -48,7 +48,50 @@
 //     return 0;
 // }
 
+// int main(void)
+// {
+//     FILE * fp = NULL;
+
+//     fp = fopen("Hello.text", "r");
+
+//     if (fp == NULL)
+//     {
+//         printf("失敗");
+//     }
+//     else
+//     {
+//         printf("成功");
+//         fclose(fp);
+//     }
+
+//     return 0;
+// }
+
+// int main(void)
+// {
+//     FILE * fp = NULL;
+
+//     fopen_s(&fp, "memo.txt", "w");
+
+//     fclose(fp);
+
+//     return 0;
+// }
+
 int main(void)
 {
     FILE * fp = NULL;
+
+    fopen_s(&fp, "Hello.txt", "w");
+
+    fputc('H', fp);
+    fputc('E', fp);
+    fputc('L', fp);
+    fputc('L', fp);
+    fputc('O', fp);
+    fputc('\n', fp);
+
+    fclose(fp);
+
+    return 0;
 }
