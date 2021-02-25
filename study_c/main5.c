@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNING
+// #define _CRT_SECURE_NO_WARNING
 #include <stdio.h>
 
 // int main(void)
@@ -78,20 +78,32 @@
 //     return 0;
 // }
 
-int main(void)
-{
-    FILE * fp = NULL;
+// int main(void)
+// {
+//     FILE * fp = NULL;
 
-    fopen_s(&fp, "Hello.txt", "w");
+//     fopen_s(&fp, "Hello.txt", "w");
 
-    fputc('H', fp);
-    fputc('E', fp);
-    fputc('L', fp);
-    fputc('L', fp);
-    fputc('O', fp);
-    fputc('\n', fp);
+//     fputc('H', fp);
+//     fputc('E', fp);
+//     fputc('L', fp);
+//     fputc('L', fp);
+//     fputc('O', fp);
+//     fputc('\n', fp);
 
-    fclose(fp);
+//     fclose(fp);
 
-    return 0;
-}
+//     return 0;
+// }
+
+// int main(void)
+// {
+//     FILE * fp = NULL;
+//     fopen_s(&fp, "Hello.txt", "w");
+
+//     fputs("Hello\n", fp);
+
+//     fclose(fp);
+
+//     return 0;
+// }
