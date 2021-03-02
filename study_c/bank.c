@@ -12,9 +12,9 @@ typedef struct
     unsigned long balance;
 } S_BANK_ACCOUNT;
 
-H_CASHCARD createBankAccount(const char * name, unsigned short pincode)
+H_CASHCARD createBankAccount(const char *name, unsigned short pincode)
 {
-    S_BANK_ACCOUNT * pAccount = NULL;
+    S_BANK_ACCOUNT *pAccount = NULL;
 
     if (name == NULL)
     {
@@ -37,7 +37,7 @@ H_CASHCARD createBankAccount(const char * name, unsigned short pincode)
 
 int printBalance(H_CASHCARD hcard)
 {
-    S_BANK_ACCOUNT * pAccount = (S_BANK_ACCOUNT *)hcard;
+    S_BANK_ACCOUNT *pAccount = (S_BANK_ACCOUNT *)hcard;
 
     if (pAccount == NULL)
     {
@@ -49,4 +49,30 @@ int printBalance(H_CASHCARD hcard)
     printf("残高：%d円\n", pAccount->balance);
 
     return 0;
+}
+
+int depositMoney(H_CASHCARD hCard, unsigned long money)
+{
+    S_BANK_ACCOUNT *pAccount = (S_BANK_ACCOUNT *)hCard;
+
+    if (pAccount == NULL)
+    {
+        return -1;
+    }
+
+    pAccount->balance += money;
+
+    return 0;
+}
+
+int withdrawalMoney(H_CASHCARD hCard, unsigned short pincode, unsigned long reqmoney)
+{
+    S_BANK_ACCOUNT *pAccount = (S_BANK_ACCOUNT *)hCard;
+
+    if (pAccount == NULL)
+    {
+        return -1;
+    }
+
+    
 }
