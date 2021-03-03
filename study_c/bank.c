@@ -74,5 +74,33 @@ int withdrawalMoney(H_CASHCARD hCard, unsigned short pincode, unsigned long reqm
         return -1;
     }
 
-    
+    if (pAccount->pincode != pincode)
+    {
+        return -2;
+    }
+
+    if (pAccount->balance < reqmoney)
+    {
+        return -3;
+    }
+}
+
+int destroyBankAccount(H_CASHCARD hCard, unsigned short pincode)
+{
+    S_BANK_ACCOUNT *pAccount = (S_BANK_ACCOUNT *)hCard;
+
+    if (pAccount == NULL)
+    {
+        return -1;
+    }
+
+    if (pAccount->pincode == pincode)
+    {
+        return -2;
+    }
+
+    free(pAccount);
+
+    return 0;
+
 }
